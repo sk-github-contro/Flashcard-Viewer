@@ -67,10 +67,14 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col">
-      {/* Main content area */}
-      <div className="flex-1 flex flex-col items-center justify-center px-4 py-8">
+      {/* Main content area constrained to leave room for fixed progress bar */}
+      <div
+        className="flex-1 w-full"
+        style={{ height: 'calc(100vh - 112px)' }}
+      >
+        <div className="h-full max-w-2xl mx-auto px-4 py-4 flex flex-col justify-between items-center">
         {/* Refresh button at top right */}
-        <div className="w-full max-w-2xl mb-4 flex justify-end">
+        <div className="w-full mb-2 flex justify-end">
           <button
             onClick={handleRefresh}
             className="p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow duration-200 hover:bg-gray-50"
@@ -101,7 +105,7 @@ function App() {
         />
 
         {/* Navigation buttons */}
-        <div className="flex items-center justify-center gap-8 mt-8">
+        <div className="flex items-center justify-center gap-8 mt-4">
           <button
             onClick={goToPrevious}
             disabled={currentIndex === 0}
@@ -154,11 +158,12 @@ function App() {
             </svg>
           </button>
         </div>
+        </div>
       </div>
 
-      {/* Progress bar at bottom */}
-      <div className="w-full bg-white shadow-lg">
-        <div className="max-w-4xl mx-auto px-8 py-6">
+      {/* Progress bar fixed at bottom */}
+      <div className="fixed bottom-0 left-0 w-full bg-white shadow-lg z-50">
+        <div className="max-w-4xl mx-auto px-6 py-4">
           {/* Progress text */}
           <div className="text-center mb-3 text-gray-700 font-semibold text-lg">
             {currentIndex + 1} / {flashcards.length}

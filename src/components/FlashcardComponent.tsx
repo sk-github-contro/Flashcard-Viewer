@@ -19,7 +19,7 @@ const FlashcardComponent: React.FC<FlashcardComponentProps> = ({
         style={{
           position: 'relative',
           width: '100%',
-          height: '520px',
+          height: '380px',
         }}
       >
         {
