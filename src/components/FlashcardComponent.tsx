@@ -49,6 +49,7 @@ const FlashcardComponent: React.FC<FlashcardComponentProps> = ({
               WebkitBackfaceVisibility: 'hidden',
               display: 'flex',
               flexDirection: 'column',
+              overflow: 'hidden',
             }}
           >
             {/* Question Content */}
@@ -60,6 +61,8 @@ const FlashcardComponent: React.FC<FlashcardComponentProps> = ({
                 alignItems: 'center',
                 justifyContent: 'center',
                 padding: '32px',
+                minHeight: 0,
+                overflowY: 'auto',
               }}
             >
               <h2
@@ -84,12 +87,13 @@ const FlashcardComponent: React.FC<FlashcardComponentProps> = ({
               </p>
             </div>
 
-            {/* Footer with Show Answer button */}
+            {/* Footer with Show Answer button - Always visible at bottom */}
             <div
               style={{
                 padding: '16px 24px 24px',
                 borderTop: '1px solid rgba(255,255,255,0.1)',
                 background: 'rgba(0,0,0,0.3)',
+                flexShrink: 0,
               }}
             >
               <button
@@ -149,6 +153,7 @@ const FlashcardComponent: React.FC<FlashcardComponentProps> = ({
                 gap: '16px',
                 padding: '24px',
                 overflowY: 'auto',
+                minHeight: 0,
               }}
             >
               <p
@@ -195,12 +200,13 @@ const FlashcardComponent: React.FC<FlashcardComponentProps> = ({
               )}
             </div>
 
-            {/* Footer with Show Question button */}
+            {/* Footer with Show Question button - Always visible at bottom */}
             <div
               style={{
                 padding: '16px 24px 24px',
                 borderTop: '1px solid #e5e7eb',
                 background: '#f9fafb',
+                flexShrink: 0,
               }}
             >
               <button
