@@ -1,0 +1,137 @@
+[
+  {
+    "id": "a7f3c2e1-4b9d-4c8a-9f2e-1d5c6a8b3e4f",
+    "front": {
+      "title": "What is React?",
+      "body": "A popular JavaScript library for building user interfaces"
+    },
+    "back": {
+      "answer": "React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called 'components'. React was created by Facebook and is maintained by Meta and the open-source community.",
+      "media": {
+        "url": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800",
+        "type": "image"
+      }
+    }
+  },
+  {
+    "id": "b8e4d3f2-5c0e-4d9b-8g3f-2e6d7b9c4f5g",
+    "front": {
+      "title": "Pythagorean Theorem",
+      "body": "What is the formula for the Pythagorean theorem?"
+    },
+    "back": {
+      "answer": "a² + b² = c², where 'c' represents the length of the hypotenuse and 'a' and 'b' represent the lengths of the other two sides of a right triangle.",
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Pythagorean.svg",
+        "type": "image"
+      }
+    }
+  },
+  {
+    "id": "c9f5e4g3-6d1f-5e0c-9h4g-3f7e8c0d5g6h",
+    "front": {
+      "title": "Capital of France",
+      "body": "What is the capital city of France?"
+    },
+    "back": {
+      "answer": "Paris is the capital and most populous city of France. Known as the 'City of Light', it is famous for its art, fashion, gastronomy, and culture. Major landmarks include the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral.",
+      "media": {
+        "url": "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=800",
+        "type": "image"
+      }
+    }
+  },
+  {
+    "id": "d0g6f5h4-7e2g-6f1d-0i5h-4g8f9d1e6h7i",
+    "front": {
+      "title": "Photosynthesis",
+      "body": "Explain the process by which plants convert light energy into chemical energy"
+    },
+    "back": {
+      "answer": "Photosynthesis is the process where plants use sunlight, water, and carbon dioxide to create oxygen and energy in the form of sugar (glucose). The chemical equation is: 6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ + 6O₂. This process occurs primarily in the chloroplasts of plant cells.",
+      "media": null
+    }
+  },
+  {
+    "id": "e1h7g6i5-8f3h-7g2e-1j6i-5h9g0e2f7i8j",
+    "front": {
+      "title": "JavaScript Array Methods",
+      "body": "What is the difference between .map() and .forEach()?"
+    },
+    "back": {
+      "answer": ".map() creates a new array by applying a function to each element and returns the new array, while .forEach() simply executes a function for each element without returning anything. Use .map() when you need to transform data, and .forEach() when you just need to perform side effects.",
+      "media": {
+        "url": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=800",
+        "type": "image"
+      }
+    }
+  },
+  {
+    "id": "f2i8h7j6-9g4i-8h3f-2k7j-6i0h1f3g8j9k",
+    "front": {
+      "title": "Speed of Light",
+      "body": "What is the speed of light in a vacuum?"
+    },
+    "back": {
+      "answer": "The speed of light in a vacuum is approximately 299,792,458 meters per second (or about 186,282 miles per second). This is often denoted as 'c' in physics equations and is considered a universal physical constant.",
+      "media": {
+        "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+        "type": "video"
+      }
+    }
+  },
+  {
+    "id": "g3j9i8k7-0h5j-9i4g-3l8k-7j1i2g4h9k0l",
+    "front": {
+      "title": "SQL JOIN Types",
+      "body": "What are the main types of SQL JOIN operations?"
+    },
+    "back": {
+      "answer": "The main types of SQL JOINs are: INNER JOIN (returns matching rows from both tables), LEFT JOIN (returns all rows from left table and matching rows from right), RIGHT JOIN (returns all rows from right table and matching rows from left), and FULL OUTER JOIN (returns all rows from both tables with NULLs where there's no match).",
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/SQL_Joins.svg",
+        "type": "image"
+      }
+    }
+  },
+  {
+    "id": "h4k0j9l8-1i6k-0j5h-4m9l-8k2j3h5i0l1m",
+    "front": {
+      "title": "Water Cycle",
+      "body": "Describe the main stages of the water cycle"
+    },
+    "back": {
+      "answer": "The water cycle consists of four main stages: 1) Evaporation - water turns to vapor from oceans, lakes, and rivers; 2) Condensation - water vapor cools and forms clouds; 3) Precipitation - water falls as rain, snow, or hail; 4) Collection - water gathers in bodies of water and the cycle repeats.",
+      "media": null
+    }
+  },
+  {
+    "id": "i5l1k0m9-2j7l-1k6i-5n0m-9l3k4i6j1m2n",
+    "front": {
+      "title": "Big O Notation",
+      "body": "What does O(n log n) time complexity mean?"
+    },
+    "back": {
+      "answer": "O(n log n) represents linearithmic time complexity, where the algorithm's running time grows in proportion to n multiplied by the logarithm of n. This is common in efficient sorting algorithms like Merge Sort and Quick Sort (average case). It's faster than O(n²) but slower than O(n).",
+      "media": {
+        "url": "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=800",
+        "type": "image"
+      }
+    }
+  },
+  {
+    "id": "j6m2l1n0-3k8m-2l7j-6o1n-0m4l5j7k2n3o",
+    "front": {
+      "title": "Mitochondria Function",
+      "body": "What is the primary function of mitochondria?"
+    },
+    "back": {
+      "answer": "Mitochondria are known as the 'powerhouses of the cell' because they generate most of the cell's supply of adenosine triphosphate (ATP), which is used as a source of chemical energy. They do this through a process called cellular respiration, converting nutrients into usable energy.",
+      "media": {
+        "url": "https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4",
+        "type": "video"
+      }
+    }
+  }
+]
+

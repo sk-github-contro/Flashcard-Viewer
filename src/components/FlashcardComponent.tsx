@@ -1,5 +1,6 @@
 import React from 'react';
 import { Flashcard } from '../types';
+import { CARD_HEIGHT, CARD_MAX_WIDTH } from '../constants';
 
 interface FlashcardComponentProps {
   flashcard: Flashcard;
@@ -13,13 +14,13 @@ const FlashcardComponent: React.FC<FlashcardComponentProps> = ({
   onFlip,
 }) => {
   return (
-    <div style={{ width: '100%', maxWidth: '700px', margin: '0 auto' }}>
+    <div style={{ width: '100%', maxWidth: `${CARD_MAX_WIDTH}px`, margin: '0 auto' }}>
       {/* Container for 3D flip */}
       <div
         style={{
           position: 'relative',
           width: '100%',
-          height: '380px',
+          height: `${CARD_HEIGHT}px`,
           perspective: '1000px',
           cursor: 'pointer',
         }}
