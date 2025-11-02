@@ -26,13 +26,16 @@ I've created a build script that installs Flutter automatically.
 
 ### Install Command:
 ```bash
-chmod +x install-flutter.sh
+echo 'Preparing Flutter build...'
 ```
+(Can be left empty - not critical)
 
 ### Build Command:
 ```bash
-./install-flutter.sh && flutter pub get && flutter build web --release
+if [ ! -d "$HOME/flutter" ]; then git clone https://github.com/flutter/flutter.git -b stable --depth 1 $HOME/flutter; fi && export PATH="$PATH:$HOME/flutter/bin" && flutter --version && flutter pub get && flutter build web --release
 ```
+
+⚠️ **IMPORTANT**: This must be ONE line, all in the Build Command field!
 
 ### Output Directory:
 ```
