@@ -1,43 +1,9 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    },
-    {
-      "src": "mobile/flutter_app/pubspec.yaml",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "mobile/flutter_app/build/web",
-        "buildCommand": "cd mobile/flutter_app && flutter build web --release"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/flutter/(.*)",
-      "dest": "/flutter/$1"
-    },
-    {
-      "src": "/flutter",
-      "dest": "/flutter/index.html"
-    },
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
+    { "src": "package.json", "use": "@vercel/static-build", "config": { "distDir": "dist" } }
   ],
   "rewrites": [
-    {
-      "source": "/flutter/(.*)",
-      "destination": "/flutter/$1"
-    }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
