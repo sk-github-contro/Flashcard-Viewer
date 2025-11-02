@@ -37,7 +37,7 @@ function App() {
           <div className="w-full mb-2 flex justify-between items-center">
             <div className="flex flex-col items-start gap-1">
               <span className="px-2 py-1 bg-blue-600 text-white text-xs font-bold rounded">
-                React Version
+                You are on: React
               </span>
               <a
                 href="https://flashcard-viewer-mobile.vercel.app"
@@ -45,7 +45,7 @@ function App() {
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:text-blue-800 underline text-sm font-medium"
               >
-                Try Flutter Version →
+                Switch to Flutter Version →
               </a>
             </div>
             <button

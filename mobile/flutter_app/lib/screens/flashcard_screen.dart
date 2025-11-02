@@ -97,17 +97,17 @@ class _FlashcardScreenState extends State<FlashcardScreen> {
                             borderRadius: BorderRadius.circular(4),
                           ),
                           child: const Text(
-                            'Flutter Version',
+                            'You are on: Flutter',
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 12,
+                              fontSize: 11,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                         ),
                         const SizedBox(height: 4),
                         NavLink(
-                          label: '← Try React Version',
+                          label: '← Switch to React Version',
                           route: 'https://flashcard-viewer.vercel.app',
                         ),
                       ],
