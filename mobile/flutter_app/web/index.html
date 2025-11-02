@@ -25,11 +25,6 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <!--
-    This adds a favicon for each platform. If you do not wish to have a
-    favicon, set "use_favicon" to false in pubspec.yaml and remove this
-    entire section.
-  -->
   <title>Flashcard Viewer</title>
   <link rel="manifest" href="manifest.json">
 
@@ -38,39 +33,28 @@
       margin: 0;
       padding: 0;
       overflow: hidden;
+      background: linear-gradient(135deg, #f0f4f8 0%, #dbeafe 100%);
     }
     .loading {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background: linear-gradient(135deg, #f0f4f8 0%, #dbeafe 100%);
       color: #1e3a8a;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    }
-    .loading::after {
-      content: "Loading Flashcard Viewer...";
     }
   </style>
 </head>
 <body>
   <script>
-    // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = null;
+    // This value is replaced by Flutter during build - do not modify manually
+    {{flutter_service_worker_version}}
+    
+    // Flutter build config will be injected here by Flutter build process
+    window.flutter_build_config = {};
   </script>
-  <!-- This script adds the flutter initialization JS code -->
+  <!-- This script loads the Flutter engine -->
   <script src="flutter.js" defer></script>
-  <script>
-    // Flutter web initialization - using new FlutterLoader.load API
-    window.addEventListener('load', function(ev) {
-      // Use the new FlutterLoader.load API (replaces deprecated loadEntrypoint)
-      _flutter.loader.load({
-        serviceWorkerSettings: {
-          serviceWorkerVersion: serviceWorkerVersion,
-        },
-      });
-    });
-  </script>
 </body>
 </html>
 
