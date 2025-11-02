@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 import '../models/flashcard.dart';
 import '../services/flashcard_service.dart';
 import '../widgets/flashcard_widget.dart';
 import '../widgets/progress_bar.dart';
+import '../widgets/nav_link.dart';
 
 class FlashcardScreen extends StatefulWidget {
   final List<Flashcard> flashcards;
@@ -78,12 +80,19 @@ class _FlashcardScreenState extends State<FlashcardScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            // Refresh button
+            // Navigation and Refresh button
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+                  if (kIsWeb)
+                    const NavLink(
+                      label: '← React Version',
+                      route: '/',
+                    )
+                  else
+                    const SizedBox.shrink(),
                   IconButton(
                     icon: const Icon(Icons.refresh),
                     onPressed: handleRefresh,

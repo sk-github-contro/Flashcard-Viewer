@@ -33,8 +33,14 @@ function App() {
         style={{ height: `calc(100vh - ${PROGRESS_BAR_HEIGHT}px)` }}
       >
         <div className="h-full max-w-2xl mx-auto px-4 py-4 flex flex-col justify-between items-center">
-          {/* Refresh button at top right */}
-          <div className="w-full mb-2 flex justify-end">
+          {/* Navigation and Refresh button */}
+          <div className="w-full mb-2 flex justify-between items-center">
+            <a
+              href="/flutter/"
+              className="text-blue-600 hover:text-blue-800 underline text-sm font-medium"
+            >
+              Try Flutter Version →
+            </a>
             <button
               onClick={refresh}
               className="p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow duration-200 hover:bg-gray-50"
