@@ -35,9 +35,11 @@
 - Change from `./` to: **`mobile/flutter_app`**
 - Click **"Continue"**
 
-#### 4.3. Framework Preset
-- Select: **"Other"** (or leave as detected)
-- Vercel should detect it automatically, but "Other" is safe
+#### 4.3. Framework Preset ⚠️ IMPORTANT
+- Select: **"Other"** (or "No Framework")
+- **DO NOT** select: React, Next.js, Vue, etc.
+- Flutter is not a standard Vercel framework, so "Other" is required
+- This tells Vercel to use your custom build commands instead of auto-detecting
 
 #### 4.4. Build and Output Settings
 Click **"Override"** next to Build and Output Settings:
