@@ -35,14 +35,19 @@ function App() {
         <div className="h-full max-w-2xl mx-auto px-4 py-4 flex flex-col justify-between items-center">
           {/* Navigation and Refresh button */}
           <div className="w-full mb-2 flex justify-between items-center">
-            <a
-              href="https://flashcard-viewer-flutter.vercel.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 hover:text-blue-800 underline text-sm font-medium"
-            >
-              Try Flutter Version →
-            </a>
+            <div className="flex flex-col items-start gap-1">
+              <span className="px-2 py-1 bg-blue-600 text-white text-xs font-bold rounded">
+                React Version
+              </span>
+              <a
+                href="https://flashcard-viewer-mobile.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800 underline text-sm font-medium"
+              >
+                Try Flutter Version →
+              </a>
+            </div>
             <button
               onClick={refresh}
               className="p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow duration-200 hover:bg-gray-50"

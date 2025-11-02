@@ -87,9 +87,30 @@ class _FlashcardScreenState extends State<FlashcardScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   if (kIsWeb)
-                    const NavLink(
-                      label: '← React Version',
-                      route: '/',
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                          decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                          child: const Text(
+                            'Flutter Version',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 4),
+                        NavLink(
+                          label: '← Try React Version',
+                          route: 'https://flashcard-viewer.vercel.app',
+                        ),
+                      ],
                     )
                   else
                     const SizedBox.shrink(),
