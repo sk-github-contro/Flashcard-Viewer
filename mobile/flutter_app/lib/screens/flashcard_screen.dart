@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_haptic_feedback/flutter_haptic_feedback.dart';
 import '../models/flashcard.dart';
 import '../services/flashcard_service.dart';
 import '../widgets/flashcard_widget.dart';
@@ -20,7 +18,6 @@ class _FlashcardScreenState extends State<FlashcardScreen> {
   bool isFlipped = false;
 
   void handleFlip() {
-    HapticFeedback.lightImpact();
     setState(() {
       isFlipped = !isFlipped;
     });
@@ -28,7 +25,6 @@ class _FlashcardScreenState extends State<FlashcardScreen> {
 
   void goToNext() {
     if (currentIndex < widget.flashcards.length - 1) {
-      HapticFeedback.selectionClick();
       setState(() {
         currentIndex++;
         isFlipped = false;
@@ -38,7 +34,6 @@ class _FlashcardScreenState extends State<FlashcardScreen> {
 
   void goToPrevious() {
     if (currentIndex > 0) {
-      HapticFeedback.selectionClick();
       setState(() {
         currentIndex--;
         isFlipped = false;
@@ -47,7 +42,6 @@ class _FlashcardScreenState extends State<FlashcardScreen> {
   }
 
   void handleRefresh() {
-    HapticFeedback.mediumImpact();
     final shuffled = FlashcardService.shuffleFlashcards(widget.flashcards);
     setState(() {
       currentIndex = 0;

@@ -126,16 +126,24 @@ flutter run
 
 ## 📦 Deployment
 
-### Web
+### Web (React)
 - **Platform**: Vercel (already configured)
 - **Build Command**: `npm run build`
 - **Output**: `dist/`
+- **Cost**: **FREE** ✅
 
-### Mobile
-- **Platform**: Google Play Store / Apple App Store
+### Web (Flutter)
+- **Platform**: Vercel (free to deploy)
+- **Build Command**: `flutter build web --release`
+- **Output**: `mobile/flutter_app/build/web`
+- **Cost**: **FREE** ✅
+
+### Mobile Apps (Optional)
+- **Platform**: Google Play Store ($25 one-time) / Apple App Store ($99/year)
 - **Build Commands**:
   - Android: `flutter build apk` or `flutter build appbundle`
   - iOS: `flutter build ios`
+- **Note**: Use Flutter Web for free deployment instead!
 
 ## 🔗 Cross-Platform Sync (Future)
 

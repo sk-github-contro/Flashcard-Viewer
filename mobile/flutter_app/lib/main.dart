@@ -1,16 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_haptic_feedback/flutter_haptic_feedback.dart';
 import 'screens/flashcard_screen.dart';
 import 'services/flashcard_service.dart';
 import 'models/flashcard.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown,
-  ]);
   runApp(const FlashcardApp());
 }
 

@@ -1,12 +1,21 @@
 import 'dart:convert';
-import 'package:flutter/services.dart';
 import '../models/flashcard.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 class FlashcardService {
   static Future<List<Flashcard>> loadFlashcards() async {
     try {
-      final String jsonString =
-          await rootBundle.loadString('assets/flashcards.json');
+      String jsonString;
+      
+      if (kIsWeb) {
+        // For web: use rootBundle (works in Flutter web)
+        jsonString = await rootBundle.loadString('assets/flashcards.json');
+      } else {
+        // For mobile: use rootBundle
+        jsonString = await rootBundle.loadString('assets/flashcards.json');
+      }
+      
       final List<dynamic> jsonList = json.decode(jsonString);
       return jsonList.map((json) => Flashcard.fromJson(json)).toList();
     } catch (e) {

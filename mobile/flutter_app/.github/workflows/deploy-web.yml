@@ -1,0 +1,40 @@
+name: Deploy Flutter Web to Vercel
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'mobile/flutter_app/**'
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.16.0'
+          channel: 'stable'
+      
+      - name: Install dependencies
+        run: |
+          cd mobile/flutter_app
+          flutter pub get
+      
+      - name: Build Flutter Web
+        run: |
+          cd mobile/flutter_app
+          flutter build web --release --base-href /flutter/
+      
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          working-directory: mobile/flutter_app/build/web
+
