@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 
-// Conditional import for web only
-import 'dart:html' as html show window;
+// Conditional import for web only - using universal_html for better compatibility
+import 'package:universal_html/html.dart' as html show window;
 
 class NavLink extends StatelessWidget {
   final String label;

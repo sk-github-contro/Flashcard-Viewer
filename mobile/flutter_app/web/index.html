@@ -57,23 +57,17 @@
   <script>
     // The value below is injected by flutter build, do not touch.
     const serviceWorkerVersion = null;
-    const FLUTTER_BASE_HREF = "/";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
   <script>
-    // Flutter web initialization
+    // Flutter web initialization - using new FlutterLoader.load API
     window.addEventListener('load', function(ev) {
-      // Wait for flutter.js to load
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
+      // Use the new FlutterLoader.load API (replaces deprecated loadEntrypoint)
+      _flutter.loader.load({
+        serviceWorkerSettings: {
           serviceWorkerVersion: serviceWorkerVersion,
         },
-        onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
-            appRunner.runApp();
-          });
-        }
       });
     });
   </script>
