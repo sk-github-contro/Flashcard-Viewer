@@ -1,0 +1,39 @@
+name: Flutter CI
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'mobile/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'mobile/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.16.0'
+      
+      - name: Install dependencies
+        run: |
+          cd mobile/flutter_app
+          flutter pub get
+      
+      - name: Verify Flutter setup
+        run: |
+          cd mobile/flutter_app
+          flutter doctor
+      
+      - name: Analyze code
+        run: |
+          cd mobile/flutter_app
+          flutter analyze
+

@@ -50,19 +50,41 @@ The built files will be in the `dist` directory.
 
 ## 📦 Project Structure
 
+This is a **hybrid monorepo** supporting both web and mobile:
+
 ```
 DigitalLearningApp/
-├── src/
+├── src/                             # Web App (React + TypeScript)
 │   ├── components/
 │   │   └── FlashcardComponent.tsx  # Flashcard with flip animation
+│   ├── hooks/
+│   │   └── useFlashcards.ts        # Custom React hook
+│   ├── utils/
+│   │   └── shuffleArray.ts         # Utility functions
+│   ├── constants/
+│   │   └── index.ts                # App constants
+│   ├── data/
+│   │   └── flashcards.json         # Flashcard data
 │   ├── App.tsx                      # Main app component
 │   ├── main.tsx                     # App entry point
 │   ├── types.ts                     # TypeScript interfaces
 │   └── index.css                    # Global styles
-├── flashcards.json                  # Flashcard data
+├── mobile/
+│   └── flutter_app/                 # Mobile App (Flutter)
+│       ├── lib/
+│       │   ├── models/              # Data models
+│       │   ├── services/            # Business logic
+│       │   ├── screens/             # App screens
+│       │   └── widgets/             # UI components
+│       └── pubspec.yaml             # Flutter dependencies
+├── shared/
+│   └── data/
+│       └── flashcards.json          # Shared flashcard data
 ├── index.html                       # HTML entry point
-└── package.json                     # Dependencies
+└── package.json                     # Web dependencies
 ```
+
+See [HYBRID_STRUCTURE.md](./HYBRID_STRUCTURE.md) for detailed structure documentation.
 
 ## 🎯 Features Implemented
 
