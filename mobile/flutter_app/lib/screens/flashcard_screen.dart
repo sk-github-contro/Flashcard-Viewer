@@ -106,9 +106,12 @@ class _FlashcardScreenState extends State<FlashcardScreen> {
                           ),
                         ),
                         const SizedBox(height: 4),
-                        NavLink(
-                          label: '← Switch to React Version',
-                          route: 'https://flashcard-viewer.vercel.app',
+                        MouseRegion(
+                          cursor: SystemMouseCursors.click,
+                          child: NavLink(
+                            label: '← Switch to React Version (Click here)',
+                            route: 'https://flashcard-viewer.vercel.app',
+                          ),
                         ),
                       ],
                     )

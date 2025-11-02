@@ -22,14 +22,20 @@ class NavLink extends StatelessWidget {
     
     return TextButton(
       onPressed: () {
-        // Web only - use dart:html
+        // Web only - navigate to React app
+        print('Navigating to React app: $route');
         html.window.location.href = route;
       },
+      style: TextButton.styleFrom(
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+      ),
       child: Text(
         label,
         style: const TextStyle(
           color: Colors.blue,
           decoration: TextDecoration.underline,
+          fontSize: 13,
+          fontWeight: FontWeight.w600,
         ),
       ),
     );
