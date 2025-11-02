@@ -1,0 +1,6 @@
+{
+  "buildCommand": "./install-flutter.sh && flutter pub get && flutter build web --release",
+  "outputDirectory": "build/web",
+  "installCommand": "chmod +x install-flutter.sh"
+}
+
