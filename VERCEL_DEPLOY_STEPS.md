@@ -52,10 +52,11 @@ Click **"Override"** next to Build and Output Settings:
   build/web
   ```
 
-- **Install Command** (Optional, but recommended):
+- **Install Command**: 
   ```
   flutter pub get
   ```
+  ⚠️ **IMPORTANT**: This installs Flutter dependencies. Vercel may auto-detect, but explicitly setting it ensures it runs.
 
 ### Step 5: Environment Variables
 - **None needed** for this project
